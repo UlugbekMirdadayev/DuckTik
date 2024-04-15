@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  font-family: Arial;
+}
+label,
+input,
+button {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-color: rgb(252, 252, 252);
+}
+.container {
+  max-width: 1280px;
+  padding: 0 160px;
+  margin: 0 auto;
+  background-color: rgb(249, 249, 249);
+}
+
+header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(249, 249, 249);
+}
+
+header .menu {
+  position: relative;
+}
+
+header .menu .menu-opener {
+  border: none;
+  background-color: transparent;
+}
+
+header .language-dropdown {
+  position: relative;
+}
+
+header .language-dropdown .dropdown-opener {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+header .language-dropdown .dropdown-opener span {
+  color: rgb(119, 119, 119);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.intro {
+  display: grid;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.intro .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-text {
+  display: grid;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.intro-text h1 {
+  color: rgb(0, 0, 0);
+  font-family: Roboto Slab;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.intro-text p {
+  color: rgb(119, 119, 119);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.searchbar {
+  display: flex;
+  border: 1px solid rgb(240, 181, 0);
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+  background: rgb(255, 255, 255);
+  width: 640px;
+  margin: 0 auto;
+  margin-top: 7px;
+  transition: 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.searchbar input {
+  border: none;
+  flex: 1;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.searchbar input::placeholder {
+  color: rgb(119, 119, 119);
+}
+
+.search-btn {
+  border-left: 1px solid rgb(240, 181, 0);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+  background: rgba(242, 201, 76, 0.28);
+  padding: 12px;
+  border-radius: 0px 4px 4px 0px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  color: rgb(51, 51, 51);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  transition: 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.searchbar:has(input:focus) {
+  box-shadow: 0px 0px 0px 4px rgba(240, 181, 0, 0.35);
+}
+
+/* .search-btn:active {
+  box-shadow: 0px 0px 0px 4px rgba(240, 181, 0, 0.35);
+  border-radius: 4px;
+} */
+
+.search-btn::before,
+.search-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  transition: 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+}
+
+.search-btn::before {
+  border-radius: 0px;
+  z-index: 2;
+  border-radius: 0px 4px 4px 0px;
+  transition: none;
+}
+
+.search-btn:active::after {
+  box-shadow: 0px 0px 0px 4px rgba(240, 181, 0, 0.35);
+}
+
+.search-btn:active::before {
+  background-color: rgb(249 238 203);
+}
+
+.search-btn svg,
+.search-btn .inner-btn {
+  position: relative;
+  z-index: 3;
+}
+
+.info-dropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.info-dropdown .dropdown-opener {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: rgb(119, 119, 119);
+  font-size: 16px;
+  line-height: 18px;
+  padding: 9px;
+  border-radius: 5px;
+  transition: 400ms ease;
+}
+
+.info-dropdown .dropdown-opener:hover {
+  background-color: rgba(238, 238, 238, 0.99);
+}
+
+.ads {
+  display: grid;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgb(231, 231, 231);
+  border-radius: 5px;
+  background: rgb(252, 252, 252);
+  min-height: 150px;
+  margin-bottom: 40px;
+  min-width: 960px;
+}
